@@ -279,12 +279,14 @@
 
 .main-posts {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
     gap: 11px;
+    
 }
 
 .post-box{
     width: 300px;
+    
 }
 
 .post-box img{
@@ -295,9 +297,9 @@
 }
 
 .post-info{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: flex; /* Establece el contenedor como un flex container */
+    justify-content: space-between; /* Alinea los elementos a lo largo del contenedor */
+    flex-wrap: wrap; 
 }
 
 .post-img {
