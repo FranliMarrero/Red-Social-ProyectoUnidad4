@@ -6,10 +6,10 @@ Este proyecto tiene la finalidad de ser usado como una red social, para que las 
 ## Tabla de Contenidos
 1. [Instalación](#instalación)
 2. [Uso](#uso)
-3. [Contacto](#contacto)
-4. [Notas de la versión](#notas-de-la-versión)
-5. [Enlaces útiles](#enlaces-útiles)
-
+3. [Preguntas y respuestas constructivas](#preguntas-y-respuestas-constructivas)
+4. [Contacto](#contacto)
+5. [Notas de la versión](#notas-de-la-versión)
+6. [Enlaces útiles](#enlaces-útiles) 
 ## Instalación 
 Para instalar este proyecto en tu dispositivo usa GitHub para descargar el código, haz una carpeta en disco D de tu computadora o laptop, abre Visual Studio Code para pegar el código, linkea las carpetas y/o archivos correspondientes y observa en el servidor nuestro tabajo o si deseas puedes cloneralo.. Así mismo en GitHub Pages puedes visualizarlo con mejor claridad y de una manera más práctica y sencilla.
 

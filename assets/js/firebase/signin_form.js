@@ -13,7 +13,7 @@ signinForm.addEventListener("submit", async (e) => {
         const userCredentials = await signInWithEmailAndPassword(auth, email, password);
         console.log(userCredentials);
 
-        showMessage("Bienvenido de nuevo ", "success");
+        showMessage("Bienvenid@ de nuevo ", "success");
 
         setTimeout(() => {
             window.location.href = "principal.html";

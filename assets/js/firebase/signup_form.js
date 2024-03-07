@@ -22,7 +22,7 @@ signupForm.addEventListener('submit', async (e) => {
 
         console.log('Usuario registrado correctamente');
         
-    showMessage("Bienvenido " + userCredential.user.displayName)
+    showMessage("Bienvenid@ " + userCredential.user.displayName)
 
     setTimeout(() => {
         window.location.href = "principal.html";

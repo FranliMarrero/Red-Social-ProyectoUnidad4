@@ -7,14 +7,19 @@ const googlebuttom = document.querySelector('#google-login')
 
 googlebuttom.addEventListener('click', async () =>{
 
-    const provider = new GoogleAuthProvider()
+    const provider = new GoogleAuthProvider();
+
+    // Forzar la selección de cuenta
+    provider.setCustomParameters({
+        prompt: 'select_account',
+    });
 
     try {
         const credentials = await signInWithPopup(auth, provider)
         console.log(credentials)
 
     
-        showMessage("Bienvenido " + credentials.user.displayName, "success");
+        showMessage("Bienvenid@ " + credentials.user.displayName, "success");
 
         setTimeout(() => {
             window.location.href = "principal.html";
