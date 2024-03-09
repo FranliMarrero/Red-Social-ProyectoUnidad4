@@ -8,6 +8,7 @@
     font-family: Arial, sans-serif;
 }
 
+
 /* Estilos base de la navbar */
 .navbar {
     background: linear-gradient(135deg, #fd9fdadc, #fc9696ea, #bd9bfdea, #b2e1f1e3);
@@ -54,14 +55,11 @@
 }
 
 .dark-mode-toggle {
+    font-size: 24px;
     cursor: pointer;
     display: flex;
     align-items: center;
-  }
-  
-  .dark-mode-toggle i {
-    font-size: 24px;
-    color: #fff;
+    color: #000;
   }
 
   .dark-mode {
@@ -158,6 +156,17 @@
     color: #000;
 }
 
+/* Ajusta la posición de los elementos hacia la derecha */
+.navbar-nav {
+    margin-left: auto;
+}
+
+/* Cambia el color del logo de la luna y el sol a negro */
+.dark-mode-toggle {
+    color: black;
+}
+
+
 #boton-publicar {
     background-color: transparent; /* Fondo transparente */
     color: #000; /* Color de texto */
@@ -166,17 +175,19 @@
     cursor: pointer;
 }
 
-.cuadro-flotante {
+ .cuadro-flotante {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ccc;
+    padding: 40px; /* Ajusta el padding para hacer el cuadro más grande */
+    border: 2px solid #000000;
+    border-radius: 15px; /* Agrega bordes redondos */
     z-index: 10;
     display: none;
 }
+    
 
 .cuadro-flotante form {
     display: flex;
@@ -189,8 +200,9 @@
 
 .cuadro-flotante input,
 .cuadro-flotante textarea {
-    padding: 5px;
+    padding: 10px;
     border: 1px solid #ccc;
+    border-radius: 3px;
     margin-bottom: 10px;
 }
 
@@ -199,6 +211,15 @@
     padding: 8px 12px; /* Ajusta el padding para cambiar el tamaño del botón */
     border: none;
     cursor: pointer;
+}
+
+.enviar {
+    background-color: #ca1795;
+    border-radius: 5px;
+}
+
+.enviar:hover {
+    background-color: #da3790;
 }
 
 .btn-close {

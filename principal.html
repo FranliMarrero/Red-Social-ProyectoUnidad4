@@ -10,10 +10,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <div class="navbar-brand">
-
                 <div class="logo">
                     <img src="assets/img/logo.png" alt="logo">
                     Instbook
@@ -22,12 +21,12 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse header-content" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li>
+                    <li class="nav-item">
                         <button class="btn btn-sidebar" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop"> &#x2665; Ver perfil</button>
                     </li>
-                    <li>
+                    <li class="nav-item">
                         <div class="container-fluid search">
                             <i class="bi bi-search-heart lupa"></i>
                             <form class="d-flex" role="search">
@@ -36,32 +35,31 @@
                             </form>
                         </div>
                     </li>
-                    <li>
-                        <!--  button-->
+                    <li class="nav-item">
                         <a href="#" class="btn btn-text">
                             <i class="bi bi-plus-circle-fill"></i>
                             Publica una foto
                         </a>
                     </li>
-                    <li>
-                        <a href="#" class="btn btn-text">
+                    <li class="nav-item">
+                        <a href="#" class="btn btn-text" id="boton-publicar">
                             <i class="bi bi-plus-circle-fill"></i>
-                            <button id="boton-publicar">Publica nota</button>
-                            <div class="cuadro-flotante oculto" id="miDiv">
-                                <form action="#">
-                                    <button id="cerrarDiv" type="button" class="btn-close" aria-label="Close">
-                                        <span aria-hidden="true"></span>
-                                    </button>
-                                    <label for="titulo">Título:</label>
-                                    <input type="text" id="titulo" name="titulo">
-                                    <label for="contenido">Contenido:</label>
-                                    <textarea id="contenido" name="contenido"></textarea>
-                                    <button type="submit">Enviar</button>
-                                </form>
-                            </div>
+                            Publica una nota
                         </a>
+                        <div class="cuadro-flotante oculto" id="miDiv">
+                            <form action="#">
+                                <button id="cerrarDiv" type="button" class="btn-close" aria-label="Close">
+                                    <span aria-hidden="true"></span>
+                                </button>
+                                <label for="titulo">Título:</label>
+                                <input type="text" id="titulo" name="titulo">
+                                <label for="contenido">Contenido:</label>
+                                <textarea id="contenido" name="contenido"></textarea>
+                                <button class="enviar" type="submit">Enviar</button>
+                            </form>
+                        </div>
                     </li>
-                    <li class="d-flex">
+                    <li class="nav-item d-flex">
                         <div class="dark-mode-toggle" onclick="toggleDarkMode()">
                             <i class="bi bi-moon"></i>
                         </div>
@@ -70,6 +68,7 @@
             </div>
         </div>
     </nav>
+    
 
     <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
         <div class="offcanvas-header">
