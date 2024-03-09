@@ -13,6 +13,7 @@
     <nav class="navbar navbar-expand-lg navbar">
         <div class="container-fluid">
             <div class="navbar-brand">
+
                 <div class="logo">
                     <img src="assets/img/logo.png" alt="logo">
                     Instbook
@@ -45,8 +46,25 @@
                     <li>
                         <a href="#" class="btn btn-text">
                             <i class="bi bi-plus-circle-fill"></i>
-                            Publica una nota
+                            <button id="boton-publicar">Publica nota</button>
+                            <div class="cuadro-flotante oculto">
+                                <form action="#">
+                                  <label for="titulo">Título:</label>
+                                  <input type="text" id="titulo" name="titulo">
+                              
+                                  <label for="contenido">Contenido:</label>
+                                  <textarea id="contenido" name="contenido"></textarea>
+                              
+                                  <button type="submit">Enviar</button>
+                                  
+                                </form>
+                            </div>
                         </a>
+                    </li>
+                    <li class="d-flex">
+                        <div class="dark-mode-toggle" onclick="toggleDarkMode()">
+                            <i class="bi bi-moon"></i>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -148,202 +166,150 @@
             </div>
         </div>
     </div>
+
+    <!-- main posts -->
+    <div class="feed mx-4">
+        <h1>Feed</h1>
+    </div>
     
-         <!-- Contenido principal -->
-         <div class="col-lg-9 col-md-8">
-            <div class="main-home">
-             <!-- stories -->
-             <div class="stories-title">
-                 <h1>Historias</h1>
-                 <a href="#" class="btn">
-                     <i class="bi bi-play-circle"></i>
-                     <div class="text">Ver todo</div>
-                 </a>
-             </div>
-             <!-- stories content-->
-             <div class="stories">
-              <!-- stories 1 -->
-              <div class="stories-img color">
-                 <img src="https://media.glamour.mx/photos/65a6c3a4aacebf14d2e77e06/master/w_1600%2Cc_limit/IMG_7703.jpeg" alt="">
-                 <div class="add">+</div>
-              </div>
-              <!-- stories 2 -->
-             <div class="stories-img">
-                 <img src="assets/img/WhatsApp Image 2024-02-28 at 5.52.39 PM.jpeg" alt="">
-             </div>
-             <!-- stories 3 -->
-             <div class="stories-img">
-                 <img src="assets/img/WhatsApp Image 2024-02-28 at 5.52.40 PM.jpeg" alt="">
-             </div>
-             <!-- stories 4 -->
-             <div class="stories-img">
-                 <img src="assets/img/WhatsApp Image 2024-02-28 at 5.52.39 PM (3).jpeg" alt="">
-             </div>
-             <!-- stories 5 -->
-             <div class="stories-img">
-                 <img src="assets/img/WhatsApp Image 2024-02-28 at 5.52.39 PM (2).jpeg" alt="">
-             </div>
-             <!-- stories 6 -->
-             <div class="stories-img">
-                 <img src="assets/img/WhatsApp Image 2024-02-28 at 5.52.39 PM (1).jpeg" alt="">
-             </div>
-             <!-- stories 7 -->
-             <div class="stories-img">
-                 <img src="assets/img/WhatsApp Image 2024-02-28 at 5.52.38 PM.jpeg" alt="">
-             </div>
-             <!-- stories 8 -->
-             <div class="stories-img">
-                 <img src="assets/img/WhatsApp Image 2024-02-28 at 5.52.38 PM (2).jpeg" alt="">
-             </div>
-             <!-- stories 9 -->
-             <div class="stories-img">
-                 <img src="assets/img/WhatsApp Image 2024-02-28 at 5.52.38 PM (1).jpeg" alt="">
-             </div>
-             <!-- stories 10 -->
-             <div class="stories-img">
-                 <img src="assets/img/WhatsApp Image 2024-02-28 at 5.52.37 PM (2).jpeg" alt="">
-             </div>
-         </div>
-        <!-- main posts -->
-         <div class="feed">
-             <h1>Feed</h1>
-         </div>
-         <!--posts -->
-         <div class="container">
-             <div class="row">
-                 <div class="col-md-12">
-                     <div class="main-posts">
-                         <!-- Box 1 -->
-                         <div class="col-md-4">
-                             <div class="post-box">
-                                 <img src="assets/img/WhatsApp Image 2024-02-28 at 5.52.38 PM (3).jpeg" alt="">
-                                 <div class="post-info">
-                                    <div class="post-profile">
-                                         <div class="post-img">
-                                             <img src="https://media.glamour.mx/photos/65a6c3a4aacebf14d2e77e06/master/w_1600%2Cc_limit/IMG_7703.jpeg" alt="">
-                                          </div>
-                                             <h3>Enzo Vogrincic</h3>
-                                         </div>
-                                         <div class="likes">
-                                             <i class="bi bi-heart"></i>
-                                             <span>84.3K</span>
-                                             <i class="bi bi-chat"></i>
-                                             <span>100</span>
-                                         </div>
+     <!--posts -->
+     <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="main-posts">
+                    <!-- Box 1 -->
+                    <div class="col-md-4">
+                        <div class="post-box">
+                            <img src="assets/img/WhatsApp Image 2024-02-28 at 5.52.38 PM (3).jpeg" alt="">
+                            <div class="post-info">
+                               <div class="post-profile">
+                                    <div class="post-img">
+                                        <img src="https://media.glamour.mx/photos/65a6c3a4aacebf14d2e77e06/master/w_1600%2Cc_limit/IMG_7703.jpeg" alt="">
                                      </div>
-                                 </div>
-                             </div>
-                         <!-- box 2 -->
-                         <div class="col-md-4">
-                             <div class="post-box">
-                                 <img src="assets/img/WhatsApp Image 2024-02-28 at 5.52.37 PM.jpeg" alt="">
-                                 <div class="post-info">
-                                     <div class="post-profile">
-                                         <div class="post-img">
-                                             <img src="assets/img/WhatsApp Image 2024-02-28 at 5.52.39 PM (3).jpeg" alt="">
-                                         </div>
-                                         <h3>Evaluna</h3>
-                                     </div>
-                                     <div class="likes">
-                                         <i class="bi bi-heart"></i>
-                                          <span>56.3K</span>
-                                          <i class="bi bi-chat"></i>
-                                          <span>500</span>
-                                     </div>
-                                 </div>
-                             </div>
-                         </div>
+                                        <h3>Enzo Vogrincic</h3>
+                                    </div>
+                                    <div class="likes">
+                                        <i class="bi bi-heart"></i>
+                                        <span>84.3K</span>
+                                        <i class="bi bi-chat"></i>
+                                        <span>100</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- box 2 -->
+                    <div class="col-md-4">
+                        <div class="post-box">
+                            <img src="assets/img/WhatsApp Image 2024-02-28 at 5.52.37 PM.jpeg" alt="">
+                            <div class="post-info">
+                                <div class="post-profile">
+                                    <div class="post-img">
+                                        <img src="assets/img/WhatsApp Image 2024-02-28 at 5.52.39 PM (3).jpeg" alt="">
+                                    </div>
+                                    <h3>Evaluna</h3>
+                                </div>
+                                <div class="likes">
+                                    <i class="bi bi-heart"></i>
+                                     <span>56.3K</span>
+                                     <i class="bi bi-chat"></i>
+                                     <span>500</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                         <!-- box 3 -->
-                         <div class="col-md-4">
-                             <div class="post-box">
-                                 <img src="https://i.pinimg.com/736x/2d/d5/45/2dd54537d0aefa5e987e5c9320533e78.jpg" alt="">
-                                 <div class="post-info">
-                                     <div class="post-profile">
-                                         <div class="post-img">
-                                             <img src="assets/img/WhatsApp Image 2024-02-28 at 5.52.39 PM (1).jpeg" alt="">
-                                         </div>
-                                         <h3>Hasley</h3>
-                                     </div>
-                                     <div class="likes">
-                                         <i class="bi bi-heart"></i>
-                                         <span>89.7K</span>
-                                         <i class="bi bi-chat"></i>
-                                        <span>490</span>
-                                     </div>
-                                 </div>
-                             </div>
-                         </div>
+                    <!-- box 3 -->
+                    <div class="col-md-4">
+                        <div class="post-box">
+                            <img src="https://i.pinimg.com/736x/2d/d5/45/2dd54537d0aefa5e987e5c9320533e78.jpg" alt="">
+                            <div class="post-info">
+                                <div class="post-profile">
+                                    <div class="post-img">
+                                        <img src="assets/img/WhatsApp Image 2024-02-28 at 5.52.39 PM (1).jpeg" alt="">
+                                    </div>
+                                    <h3>Hasley</h3>
+                                </div>
+                                <div class="likes">
+                                    <i class="bi bi-heart"></i>
+                                    <span>89.7K</span>
+                                    <i class="bi bi-chat"></i>
+                                   <span>490</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                         <!-- box 4 -->
-                         <div class="col-md-4">
-                             <div class="post-box">
-                                 <img src="https://i.pinimg.com/originals/5d/a3/0c/5da30cae46f155f041043cb90d8bd55e.jpg" alt="">
-                                 <div class="post-info">
-                                     <div class="post-profile">
-                                         <div class="post-img">
-                                             <img src="assets/img/WhatsApp Image 2024-02-28 at 5.52.37 PM (2).jpeg" alt="">
-                                         </div>
-                                         <h3>Lila</h3>
-                                     </div>
-                                     <div class="likes">
-                                         <i class="bi bi-heart"></i>
-                                         <span>30.7K</span>
-                                         <i class="bi bi-chat"></i>
-                                         <span>470</span>
-                                     </div>
-                                 </div>
-                             </div>
-                         </div>
+                    <!-- box 4 -->
+                    <div class="col-md-4">
+                        <div class="post-box">
+                            <img src="https://i.pinimg.com/originals/5d/a3/0c/5da30cae46f155f041043cb90d8bd55e.jpg" alt="">
+                            <div class="post-info">
+                                <div class="post-profile">
+                                    <div class="post-img">
+                                        <img src="assets/img/WhatsApp Image 2024-02-28 at 5.52.37 PM (2).jpeg" alt="">
+                                    </div>
+                                    <h3>Lila</h3>
+                                </div>
+                                <div class="likes">
+                                    <i class="bi bi-heart"></i>
+                                    <span>30.7K</span>
+                                    <i class="bi bi-chat"></i>
+                                    <span>470</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                          <!-- box 5-->
-                          <div class="col-md-4">
-                             <div class="post-box">
-                                 <img src="https://i.pinimg.com/originals/5d/a3/0c/5da30cae46f155f041043cb90d8bd55e.jpg" alt="">
-                                 <div class="post-info">
-                                     <div class="post-profile">
-                                         <div class="post-img">
-                                             <img src="assets/img/WhatsApp Image 2024-02-28 at 5.52.37 PM (2).jpeg" alt="">
-                                         </div>
-                                         <h3>Lila</h3>
-                                     </div>
-                                     <div class="likes">
-                                         <i class="bi bi-heart"></i>
-                                         <span>30.7K</span>
-                                         <i class="bi bi-chat"></i>
-                                         <span>470</span>
-                                     </div>
-                                 </div>
-                             </div>
-                         </div>
+                     <!-- box 5-->
+                     <div class="col-md-4">
+                        <div class="post-box">
+                            <img src="https://i.pinimg.com/originals/5d/a3/0c/5da30cae46f155f041043cb90d8bd55e.jpg" alt="">
+                            <div class="post-info">
+                                <div class="post-profile">
+                                    <div class="post-img">
+                                        <img src="assets/img/WhatsApp Image 2024-02-28 at 5.52.37 PM (2).jpeg" alt="">
+                                    </div>
+                                    <h3>Lila</h3>
+                                </div>
+                                <div class="likes">
+                                    <i class="bi bi-heart"></i>
+                                    <span>30.7K</span>
+                                    <i class="bi bi-chat"></i>
+                                    <span>470</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                         <!-- box 6-->
-                         <div class="col-md-4">
-                             <div class="post-box">
-                                 <img src="https://i.pinimg.com/originals/5d/a3/0c/5da30cae46f155f041043cb90d8bd55e.jpg" alt="">
-                                 <div class="post-info">
-                                     <div class="post-profile">
-                                         <div class="post-img">
-                                             <img src="assets/img/WhatsApp Image 2024-02-28 at 5.52.37 PM (2).jpeg" alt="">
-                                         </div>
-                                         <h3>Lila</h3>
-                                     </div>
-                                     <div class="likes">
-                                         <i class="bi bi-heart"></i>
-                                         <span>30.7K</span>
-                                         <i class="bi bi-chat"></i>
-                                         <span>470</span>
-                                     </div>
-                                 </div>
-                             </div>
-                         </div>
-                         
-                     </div>
-                 </div>
-             </div>
-         </div>  
-            
+                    <!-- box 6-->
+                    <div class="col-md-4">
+                        <div class="post-box">
+                            <img src="https://i.pinimg.com/originals/5d/a3/0c/5da30cae46f155f041043cb90d8bd55e.jpg" alt="">
+                            <div class="post-info">
+                                <div class="post-profile">
+                                    <div class="post-img">
+                                        <img src="assets/img/WhatsApp Image 2024-02-28 at 5.52.37 PM (2).jpeg" alt="">
+                                    </div>
+                                    <h3>Lila</h3>
+                                </div>
+                                <div class="likes">
+                                    <i class="bi bi-heart"></i>
+                                    <span>30.7K</span>
+                                    <i class="bi bi-chat"></i>
+                                    <span>470</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>  
+       
     <script src="assets/js/firebase/logout.js"></script>
+    <script src="assets/js/Darkmode.js"></script>
+    <script src="assets/js/firebase/nota.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

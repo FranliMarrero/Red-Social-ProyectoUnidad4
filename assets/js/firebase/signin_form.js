@@ -6,12 +6,26 @@ const signinForm = document.querySelector("#signin-form");
 signinForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const email = signinForm["email-signin"].value;
+    const userEmail = signinForm["email-signin"].value; // Usamos userEmail para almacenar el correo electrónico del formulario
     const password = signinForm["password-signin"].value;
 
     try {
-        const userCredentials = await signInWithEmailAndPassword(auth, email, password);
+        const userCredentials = await signInWithEmailAndPassword(auth, userEmail, password); // Pasamos userEmail a la función signInWithEmailAndPassword
         console.log(userCredentials);
+
+        // Obtener el usuario actualmente autenticado
+        var user = userCredentials.user;
+
+        if (user) {
+            // El usuario está autenticado, obtener su información de perfil
+            var displayName = user.displayName;
+            var email = user.email;
+            var photoURL = user.photoURL;
+
+            // Mostrar la foto de perfil en la página web
+            var profileImage = document.getElementById('profile-image');
+            profileImage.src = photoURL;
+        }
 
         showMessage("Bienvenid@ de nuevo ", "success");
 
