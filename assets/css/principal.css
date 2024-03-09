@@ -175,7 +175,7 @@
     padding: 20px;
     border: 1px solid #ccc;
     z-index: 10;
-    visibility: hidden;
+    display: none;
 }
 
 .cuadro-flotante form {
@@ -201,6 +201,11 @@
     cursor: pointer;
 }
 
+.btn-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
 
 .offcanvas-header{
     background: #c9448d;

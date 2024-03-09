@@ -47,16 +47,16 @@
                         <a href="#" class="btn btn-text">
                             <i class="bi bi-plus-circle-fill"></i>
                             <button id="boton-publicar">Publica nota</button>
-                            <div class="cuadro-flotante oculto">
+                            <div class="cuadro-flotante oculto" id="miDiv">
                                 <form action="#">
-                                  <label for="titulo">Título:</label>
-                                  <input type="text" id="titulo" name="titulo">
-                              
-                                  <label for="contenido">Contenido:</label>
-                                  <textarea id="contenido" name="contenido"></textarea>
-                              
-                                  <button type="submit">Enviar</button>
-                                  
+                                    <button id="cerrarDiv" type="button" class="btn-close" aria-label="Close">
+                                        <span aria-hidden="true"></span>
+                                    </button>
+                                    <label for="titulo">Título:</label>
+                                    <input type="text" id="titulo" name="titulo">
+                                    <label for="contenido">Contenido:</label>
+                                    <textarea id="contenido" name="contenido"></textarea>
+                                    <button type="submit">Enviar</button>
                                 </form>
                             </div>
                         </a>
