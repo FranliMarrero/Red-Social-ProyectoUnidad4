@@ -8,6 +8,10 @@
     font-family: Arial, sans-serif;
 }
 
+body {
+    background: linear-gradient(to right, #ffffff, #ffffff,#fc9696ea, #ad8ceb, #c3eeff);
+}
+
 
 /* Estilos base de la navbar */
 .navbar {
@@ -180,7 +184,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff;
+    background-color: #ff8dcf93;
     padding: 40px; /* Ajusta el padding para hacer el cuadro más grande */
     border: 2px solid #000000;
     border-radius: 15px; /* Agrega bordes redondos */
@@ -192,6 +196,12 @@
 .cuadro-flotante form {
     display: flex;
     flex-direction: column;
+}
+
+/* Cuando el fondo del cuadro flotante es negro */
+.dark-mode .cuadro-flotante {
+    background-color: #d600c48c;
+    border: 2px solid #fff;
 }
 
 .cuadro-flotante label {
@@ -221,11 +231,19 @@
 .enviar:hover {
     background-color: #da3790;
 }
+.dark-mode .enviar {
+    color: #fff;
+    background-color: #f01fd4;
+}
 
 .btn-close {
     position: absolute;
     top: 0;
     right: 0;
+}
+
+.dark-mode .btn-close {
+    background-color: #fff;
 }
 
 .offcanvas-header{
@@ -416,12 +434,6 @@
 .feed-text h2 {
     font-size: 1rem;
     margin-right: 1rem;
-}
-
-.main-posts {
-    display: grid;
-    grid-template-columns:  repeat(auto-fit, minmax(300px, auto));
-    gap: 11px;
 }
 
 .post-box{
